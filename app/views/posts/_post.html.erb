@@ -9,6 +9,11 @@
     <%= post.longitude %>
   </p>
 
+    <p>
+    <strong>Latitude:</strong>
+    <%= post.latitude %>
+  </p>
+  
   <p>
     <strong>User:</strong>
     <%= post.user_id %>
@@ -22,6 +27,13 @@
   <p>
     <strong>Show likes count:</strong>
     <%= post.show_likes_count %>
+  </p>
+
+  <p>
+    <strong>Images:</strong>
+    <% post.images.each do |image| %>
+      <div><%= image_tag image %></div>
+    <% end %>
   </p>
 
 </div>
